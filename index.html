@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educación Vial Quibdó</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde: #2ecc71;
+      --azul: #3498db;
+      --amarillo: #f1c40f;
+      --rojo: #e74c3c;
+      --gris-claro: #ecf0f1;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1569336415962-a2bddaa60d42?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .btn-cta {
+      background-color: var(--amarillo);
+      color: #000;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .stats-section {
+      background-color: var(--azul);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .map-container {
+      height: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .social-icon {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .social-icon:hover {
+      color: var(--amarillo);
+    }
+
+    /* Animaciones */
+    @keyframes trafficLight {
+      0% {
+        background-color: var(--rojo);
+      }
+
+      50% {
+        background-color: var(--amarillo);
+      }
+
+      100% {
+        background-color: var(--verde);
+      }
+    }
+
+    .traffic-light-animation {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      animation: trafficLight 3s infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img href="assets/img/Logo_1.png" alt="Educación Vial Quibdó">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feature-icon text-primary">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Simuladores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reportes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mapa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Certificaciones</a>
+          </li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="Login.php" class="btn btn-outline-primary me-2">Iniciar Sesión</a>
+          <a href="Login.php" class="btn btn-success">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-4">¡Transformamos la movilidad en Quibdó!</h1>
+          <p class="lead mb-5">Aprende, practica y certifícate en seguridad vial de forma interactiva.</p>
+          <a href="Login.php" class="btn btn-cta">Empieza ahora <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold">Nuestras herramientas</h2>
+          <p class="text-muted">Todo lo que necesitas para convertirte en un experto en seguridad vial</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card card p-4 text-center">
+            <div class="feature-icon text-primary">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h4>Cursos Interactivos</h4>
+            <p class="text-muted">Aprende normas con videos, imágenes y cuestionarios diseñados por expertos.</p>
+            <a href="#" class="btn btn-sm btn-outline-primary">Ver más</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card card p-4 text-center">
+            <div class="feature-icon text-danger">
+              <i class="fas fa-traffic-light"></i>
+            </div>
+            <h4>Simuladores Viales</h4>
+            <p class="text-muted">Practica en escenarios reales y toma decisiones como conductor o peatón.</p>
+            <a href="#" class="btn btn-sm btn-outline-danger">Probar ahora</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-card card p-4 text-center">
+            <div class="feature-icon text-success">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h4>Reporte Incidentes</h4>
+            <p class="text-muted">Ayuda a mejorar las calles reportando problemas en tiempo real.</p>
+            <a href="#" class="btn btn-sm btn-outline-success">Reportar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="stat-number">90%</div>
+          <h3>de accidentes se previenen</h3>
+          <p>con educación vial adecuada</p>
+        </div>
+        <div class="col-md-6">
+          <div class="stat-number">1,200+</div>
+          <h3>usuarios certificados</h3>
+          <p>en 2024</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="fw-bold mb-4">Mapa interactivo de puntos críticos</h2>
+          <p>Identifica zonas de alto riesgo en Quibdó y planifica tus rutas de manera segura.</p>
+          <p>Nuestro sistema actualiza en tiempo real la información sobre:</p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Accidentes frecuentes</li>
+            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Congestión vehicular</li>
+            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Semáforos dañados</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-3">Explorar mapa completo</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="map-container">
+            <!-- Aquí iría el mapa real con Google Maps API o similar -->
+            <img
+              src="https://maps.googleapis.com/maps/api/staticmap?center=Quibdó,Chocó&zoom=13&size=600x400&maptype=roadmap&markers=color:red%7CQuibdó,Chocó&key=YOUR_API_KEY"
+              alt="Mapa de Quibdó" class="img-fluid w-100 h-100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5 class="mb-4">Educación Vial Quibdó</h5>
+          <p>Una iniciativa para mejorar la movilidad y seguridad en las vías de nuestro municipio.</p>
+          <div class="d-flex mt-4">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="mb-4">Enlaces</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white">Inicio</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Cursos</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Simuladores</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Mapa</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="mb-4">Legal</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white">Términos</a></li>
+            <li class="mb-2"><a href="#" class="text-white">Privacidad</a></li>
+            <li class="mb-2"><a href="#" class="text-white">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="mb-4">Aliados</h5>
+          <div class="row">
+            <div class="col-4 mb-3">
+              <img src="https://via.placeholder.com/80x40?text=Alcaldía" alt="Alcaldía de Quibdó" class="img-fluid">
+            </div>
+            <div class="col-4 mb-3">
+              <img src="https://via.placeholder.com/80x40?text=Tránsito" alt="Secretaría de Tránsito" class="img-fluid">
+            </div>
+            <div class="col-4 mb-3">
+              <img src="https://via.placeholder.com/80x40?text=Policía" alt="Policía de Tránsito" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">© 2025 Educación Vial Quibdó. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="traffic-light-animation d-inline-block me-2"></div>
+          <span>Conducimos hacia un futuro más seguro</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animación para el semáforo del footer
+    document.addEventListener('DOMContentLoaded', function () {
+      const trafficLight = document.querySelector('.traffic-light-animation');
+
+      // Cambiar el color del semáforo cada 3 segundos
+      setInterval(() => {
+        const colors = ['#e74c3c', '#f1c40f', '#2ecc71'];
+        let currentIndex = 0;
+
+        return function () {
+          trafficLight.style.backgroundColor = colors[currentIndex];
+          currentIndex = (currentIndex + 1) % colors.length;
+        };
+      }, 3000);
+
+      // Efecto hover para las tarjetas de características
+      const featureCards = document.querySelectorAll('.feature-card');
+      featureCards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+          const icon = this.querySelector('.feature-icon i');
+          icon.classList.add('fa-bounce');
+        });
+
+        card.addEventListener('mouseleave', function () {
+          const icon = this.querySelector('.feature-icon i');
+          icon.classList.remove('fa-bounce');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
